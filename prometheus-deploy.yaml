@@ -35,11 +35,11 @@ spec:
           containerPort: 9090
         resources:
           requests:
-            cpu: 20000m
-            memory: 20000M
+            cpu: 2000m
+            memory: 1000M
           limits:
-            cpu: 20000m
-            memory: 20000M
+            cpu: 2000m
+            memory: 1000M
         securityContext:
           privileged: true
         volumeMounts:
@@ -54,7 +54,8 @@ spec:
       volumes:
       - name: data
         hostPath:
-          path: /home/cdnadmin/prometheus_data 
+          #path: /home/cdnadmin/prometheus_data 
+          path: /Users/ping/works/prometheus/prometheus_data 
       - name: config-volume
         configMap:
           name: prometheus-core
